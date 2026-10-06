@@ -1,0 +1,13 @@
+# Never commit secrets or local n8n data
+.env
+*.env
+*.key
+*.pem
+client_secret*.json
+credentials*.json
+n8n_data/
+.n8n/
+
+# OS clutter
+.DS_Store
+Thumbs.db
