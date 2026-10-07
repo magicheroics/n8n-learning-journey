@@ -4,7 +4,7 @@ A public log of how I'm learning AI workflow automation with [n8n](https://n8n.i
 
 ## About me
 
-I'm an IT student focusing on networking and cybersecurity, working toward a career as a network engineer. I'm learning n8n to get hands-on with APIs, webhooks, and automation. These skills carry over to network automation and security operations work.
+I'm an IT student focusing on networking ,cyber security and AI automation, working toward a career as a network engineer. I'm learning n8n to get hands-on with APIs, webhooks, and automation. These skills carry over to network automation and security operations work.
 
 ## My setup
 
