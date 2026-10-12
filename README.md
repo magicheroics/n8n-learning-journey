@@ -26,7 +26,7 @@ Then open `http://localhost:5678`.
 | # | Project | What it does | Status |
 |---|---------|--------------|--------|
 | 1 | [Simple email agent](workflows/simple-email-agent.json) | Chat agent that drafts professional emails, with a Gmail send tool attached | Done |
-| 2 | Inbox Manager Agent | Reads, classifies, and labels emails, then drafts, replies, or notifies | In progress |
+| 2 | Inbox Manager Agent | Reads, classifies, and labels emails, then drafts, replies, or notifies | Done |
 | 3 | Network alert workflow | Check whether devices respond and send an alert when one doesn't | Planned |
 
 ## Project 1: Simple email agent
