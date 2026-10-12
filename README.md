@@ -107,7 +107,7 @@ Rules:
 - [x] Install n8n with Docker
 - [x] Connect Gemini and Gmail credentials
 - [x] Build and publish a first AI agent
-- [ ] Finish the Inbox Manager Agent
+- [x] Finish the Inbox Manager Agent
 - [ ] Add a knowledge base (embeddings and a vector store)
 - [ ] Build a Telegram bot
 - [ ] Build a network-monitoring alert workflow
