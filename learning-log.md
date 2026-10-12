@@ -29,3 +29,24 @@ Short entries on what I did, what went wrong, and what I took from it. Newest en
 - Test URLs and production URLs behave differently in n8n
 
 **Next:** finish the Inbox Manager Agent, then improve the email agent so it only sends when asked.
+
+## Entry 2: Inbox Manager Agent (prototype)
+
+**Goal:** understand how an agent reacts to incoming email on its own, instead of waiting for a chat message.
+
+**What I did**
+- Built Gmail Trigger → Text Classifier → label → AI Agent → reply, based on Nate Herk's tutorial
+- Wrote label definitions and five fake test emails to drive it
+- Got the Customer Support branch working end to end
+
+**What I noticed**
+- Only one of the four categories has actions attached, so the others still go nowhere
+- The agent had pinned data on it, which can hide whether the model actually ran
+- The reply node sends immediately, so drafts would be safer while testing
+
+**What I learned**
+- Polling triggers, items, classification, structured output, routing, and workflow vs agent
+- Overlapping keywords in category definitions can confuse the classifier
+- Email text is untrusted input, so prompts should treat it as data
+
+**Next:** wire the other branches, add a High Priority notification, and record test results.
