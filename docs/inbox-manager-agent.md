@@ -6,13 +6,13 @@ An n8n workflow that watches a Gmail inbox, classifies each new email with AI, l
 
 ## Screenshots
 
-![Design diagram](../images/inbox-agent-design.png)
+![Design diagram](../images/inbox-manager-agent/design.png)
 *The design I started from .*
 
-![Workflow canvas](../images/inbox-agent-canvas.png)
+![Workflow canvas](../images/inbox-manager-agent/canvas.png)
 *The current workflow in n8n.*
 
-![Text Classifier categories](../images/text-classifier-categories.png)
+![Text Classifier categories](../images/inbox-manager-agent/text-classifier-categories.png)
 *Category names and descriptions that steer the classifier.*
 
 ## How it works

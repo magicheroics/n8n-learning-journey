@@ -31,14 +31,14 @@ Then open `http://localhost:5678`.
 
 ## Project 1: Simple email agent
 
-![Workflow canvas](images/workflow-canvas.png)
+![Workflow canvas](images/simple-email-agent/canvas.png)
 
 **Nodes:** Chat Trigger, AI Agent, Google Gemini Chat Model, Simple Memory, Gmail tool.
 
 The agent asks one clarifying question when details are missing, then writes the email:
 
-![Agent asks a clarifying question](images/chat-clarifying-question.png)
-![Generated email](images/generated-email.png)
+![Agent asks a clarifying question](images/simple-email-agent/chat-clarifying-question.png)
+![Generated email](images/simple-email-agent/generated-email.png)
 
 ### System prompt
 
