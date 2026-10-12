@@ -1,0 +1,6 @@
+label,subject,body
+customer support,Issue Logging Into Dashboard,"Hi team, I've been trying to log into my dashboard since yesterday, but it keeps showing an ""Invalid Credentials"" error even though my password is correct. Could you please help me reset my access?"
+customer support,Integration Not Syncing With CRM,"Hello, our CRM integration stopped syncing new leads this morning. No new records have appeared since 8 a.m. Could you look into what might be causing the issue?"
+finance/billing,Incorrect Charge on Invoice #4782,"Hi there, I was charged twice on my most recent invoice (#4782). Please confirm the extra charge is refunded and let me know when that's done."
+high priority,System Outage Affecting All Users,Urgent: Our main production environment is down and customers cannot access their accounts. This needs immediate attention and a status update as soon as possible.
+promotion,New Features + 25% Off Annual Plan,We’re excited to announce our latest feature update! Upgrade to the annual plan by Friday to get 25% off and unlock advanced analytics and automation tools.

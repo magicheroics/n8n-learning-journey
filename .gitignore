@@ -11,3 +11,6 @@ n8n_data/
 # OS clutter
 .DS_Store
 Thumbs.db
+.~lock.*#
+.~lock.*#
+.~lock.*#
