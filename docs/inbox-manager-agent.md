@@ -7,7 +7,7 @@ An n8n workflow that watches a Gmail inbox, classifies each new email with AI, l
 ## Screenshots
 
 ![Design diagram](../images/inbox-agent-design.png)
-*The design I started from. Based on the Inbox Manager Agent from Nate Herk's tutorial.*
+*The design I started from .*
 
 ![Workflow canvas](../images/inbox-agent-canvas.png)
 *The current workflow in n8n.*
