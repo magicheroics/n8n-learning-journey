@@ -44,6 +44,34 @@ Short entries on what I did, what went wrong, and what I took from it. Newest en
 - The agent had pinned data on it, which can hide whether the model actually ran
 - The reply node sends immediately, so drafts would be safer while testing
 
+## Entry 3: Tracing what n8n does on the network
+
+**Goal:** understand what happens on the network when an n8n node calls Google.
+
+**What happened**
+- A workflow failed away from home with "The DNS server returned an error." My laptop's DNS worked, but the n8n container was still using my home network's DNS servers. I fixed it by recreating the container with `--dns 1.1.1.1 --dns 8.8.8.8` and a localhost-only port binding. Full write-up: [troubleshooting-dns-in-docker.md](docs/troubleshooting-dns-in-docker.md)
+- The Text Classifier hit a Gemini `503` on a preview model again. I switched to a stable model and turned on Retry On Fail.
+
+**What I learned**
+- `gmail.googleapis.com` is the Gmail API host and `generativelanguage.googleapis.com` is the Gemini API host. Every Gmail or Gemini node call is a request to one of them.
+- Each call follows the same chain: DNS lookup, TCP and TLS on port 443, an HTTPS request carrying my OAuth token, then a JSON response with a status code.
+- Failures at different layers look different: DNS error (name resolution), `503` (server overloaded), `401` (not authenticated).
+- DNS only controls outbound name lookup. Who can reach n8n is controlled by the port binding (`127.0.0.1`) and the login, not by DNS.
+
+**Exercise**
+
+```bash
+nslookup gmail.googleapis.com
+curl -i https://gmail.googleapis.com/gmail/v1/users/me/messages
+```
+
+Result:
+- `nslookup` returned 8 IPv4 and 8 IPv6 addresses, answered by my current network's DNS server (not my home one), which shows the laptop adapts to each network while the container uses fixed public DNS.
+- `curl` returned `HTTP/2 401` with a `www-authenticate: Bearer` header and a JSON error: `status: UNAUTHENTICATED`, reason `CREDENTIALS_MISSING`, location `Authorization` header. The request reached Gmail's list-messages method, but with no OAuth token Google refused it. This is the same token n8n attaches to every Gmail node call.
+- `401` means "who are you?" while `403` means "I know you, but you're not allowed."
+
+**Next:** wire up the remaining inbox agent branches and record the test results.
+
 **What I learned**
 - Polling triggers, items, classification, structured output, routing, and workflow vs agent
 - Overlapping keywords in category definitions can confuse the classifier
