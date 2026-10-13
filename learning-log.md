@@ -1,6 +1,6 @@
 # Learning log
 
-Short entries on what I did, what went wrong, and what I took from it. Newest entries go at the top.
+Short entries on what I did, what went wrong, and what I took from it.
 
 ---
 
@@ -30,6 +30,8 @@ Short entries on what I did, what went wrong, and what I took from it. Newest en
 
 **Next:** finish the Inbox Manager Agent, then improve the email agent so it only sends when asked.
 
+
+
 ## Entry 2: Inbox Manager Agent (prototype)
 
 **Goal:** understand how an agent reacts to incoming email on its own, instead of waiting for a chat message.
@@ -43,6 +45,8 @@ Short entries on what I did, what went wrong, and what I took from it. Newest en
 - Only one of the four categories has actions attached, so the others still go nowhere
 - The agent had pinned data on it, which can hide whether the model actually ran
 - The reply node sends immediately, so drafts would be safer while testing
+
+
 
 ## Entry 3: Tracing what n8n does on the network
 
