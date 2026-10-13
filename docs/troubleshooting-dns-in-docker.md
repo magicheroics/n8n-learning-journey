@@ -9,7 +9,7 @@
 
 | | |
 |---|---|
-| **Symptom** | An n8n workflow failed with: *"The DNS server returned an error, perhaps the server is offline"* |
+| **Problem** | An n8n workflow failed with: *"The DNS server returned an error, perhaps the server is offline"* |
 | **Root cause** | The n8n container was still configured with my **home network's DNS servers** (private `192.168.x.x` addresses), which are unreachable from any other network |
 | **Fix** | Recreate the container with explicit public DNS servers using `--dns` |
 | **Bonus hardening** | Bind n8n's port to `127.0.0.1` so it is not exposed on public Wi-Fi |
@@ -17,7 +17,7 @@
 
 ---
 
-## 1. The symptom
+## 1. The Problem
 
 Running a workflow whose nodes call Google services (the Gemini model and Gmail) failed with:
 
