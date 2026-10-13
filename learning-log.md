@@ -48,6 +48,9 @@ Short entries on what I did, what went wrong, and what I took from it.
 
 
 
+
+
+
 ## Entry 3: Tracing what n8n does on the network
 
 **Goal:** understand what happens on the network when an n8n node calls Google.
