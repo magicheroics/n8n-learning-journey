@@ -95,6 +95,8 @@ Rules:
 | Webhook `404 ... is not registered` | Production URL used on an unpublished workflow | Publish the workflow, or test with **Open chat** in the editor |
 | Google Cloud `OR_BACR2_59` | Billing account setup failed | Skip billing and create the project directly; the Gmail API doesn't need it |
 | OAuth `invalid_client` | Client Secret typed incorrectly | Copy and paste the secret instead of retyping it |
+| Gmail credential "needs to be reconnected" | Testing-mode refresh token expired after about 7 days | Disconnect and sign in again; see [full write-up](docs/troubleshooting-gmail-credential-expired.md) |
+
 
 ## Resources I'm learning from
 
