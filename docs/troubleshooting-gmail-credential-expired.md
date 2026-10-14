@@ -106,16 +106,14 @@ While verifying the fix, **Fetch test event** returned an email I had **sent**, 
 
 In the Inbox Manager Agent, that means sent mail could be classified and passed to the **Reply to a message** node, which sends immediately. It could email a reply to someone I had just written to.
 
-**Planned fix (to verify):** in the Gmail Trigger's **Filters**:
+**Fix applied:** in the Gmail Trigger's **Filters**:
 
 - **Label Names or IDs:** `INBOX`
-- **Search:** `-from:me` (optionally also `-from:noreply` to skip automated senders)
+- **Search:** `-from:me`
 
-Also consider switching the reply node to **Create a draft** while testing, and polling every few minutes instead of every minute.
-
-- [ ] Add the filters
-- [ ] Send a test email from a second address and confirm the trigger picks it up
-- [ ] Confirm a sent email is no longer picked up
+- [x] Add the filters
+- [x] Send a test email from a second address and confirm the trigger picks it up
+- [x] Confirm a sent email is no longer picked up
 
 ---
 
