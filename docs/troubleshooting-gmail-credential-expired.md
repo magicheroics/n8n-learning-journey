@@ -9,7 +9,7 @@
 
 | | |
 |---|---|
-| **Symptom** | The Gmail Trigger failed with *"The credential "Gmail account" needs to be reconnected"* |
+| **Issue** | The Gmail Trigger failed with *"The credential "Gmail account" needs to be reconnected"* |
 | **Most likely cause** | Google expires OAuth refresh tokens after about 7 days while an app is in Testing mode, and the credential was about a week old |
 | **Fix** | Disconnect the credential in n8n and sign in with Google again |
 | **Verification** | **Fetch test event** on the Gmail Trigger returned a recent email from the mailbox |
@@ -17,7 +17,7 @@
 
 ---
 
-## 1. The symptom
+## 1. The Issue
 
 The Gmail Trigger node showed this error:
 
