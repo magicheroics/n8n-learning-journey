@@ -79,7 +79,7 @@ Five fake emails in [`samples/sample_emails.csv`](../samples/sample_emails.csv),
 - The reply node currently sends immediately instead of creating a draft
 - The workflow only runs while it is published and my laptop and Docker are running
 - The Gmail connection expires about every 7 days while my Google app is in Testing mode
--  The Gmail Trigger has no filter yet, so it also picks up sent mail; planned fix is an INBOX label filter plus `-from:me`
+- The Gmail Trigger is filtered to INBOX with `-from:me`, so my own sent mail isn't processed
 
 ## Import it
 
