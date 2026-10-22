@@ -151,7 +151,7 @@ The test emails are in [`samples/sample_emails.csv`](../samples/sample_emails.cs
 - **Overlap:** "System Outage Affecting All Users" could fit both Customer Support and High Priority. Check which one wins, and sharpen the High Priority description if needed (for example: "If an email is urgent and also fits another category, choose High Priority").
 - **Fallback behavior:** it should catch unclear emails without grabbing clear ones. If it takes too many, tighten its description. If it takes too few, strengthen the "when in doubt" line.
 
-
+### Images
 ![Labels applied in Gmail](../images/inbox-manager-agent/gmail-labels-applied.png)
 *Test emails sorted into labels by the classifier.*
 
