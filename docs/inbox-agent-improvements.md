@@ -53,6 +53,14 @@ Match the AI's freedom to the cost of a mistake:
 
 While testing, **Fetch test event** returned an email I had **sent**, because the Gmail Trigger had no filter. Sent mail could have been classified and answered. I added a **Search** filter of `-from:me` (Gmail search syntax for "not from me"), and a test email from a second address still came through.
 
+![Create reply draft node](../images/inbox-manager-agent/create-reply-draft-node.png)
+*The reply is saved as a draft instead of being sent.*
+
+![Draft created in Gmail](../images/inbox-manager-agent/draft-created.png)
+*An unsent AI-written draft waiting for my review.*
+
+![Gmail Trigger filters](../images/inbox-manager-agent/gmail-trigger-filters.png)
+*The trigger ignores mail I sent myself.*
 ---
 
 ## 2. Add a fallback category for emails that fit nothing
@@ -92,6 +100,15 @@ Sent an email with the subject **Quick question** and a vague body about a lawye
 
 A classifier that must always pick a category will sometimes pick wrongly. Giving it an explicit "I'm not sure" option, and sending that option to a human, is safer than hoping the four categories cover everything.
 
+
+![Text Classifier categories](../images/inbox-manager-agent/text-classifier-categories.png)
+*Five categories, including Needs Human Review.*
+
+![Fallback branch run](../images/inbox-manager-agent/fallback-branch-run.png)
+*An unclear email goes to the review label and stops, with no AI Agent run.*
+
+![Needs Human Review label in Gmail](../images/inbox-manager-agent/needs-human-review-label.png)
+*The email is labeled for review and has no draft.*
 ---
 
 ## 3. Run all sample emails and record the results
@@ -134,6 +151,12 @@ The test emails are in [`samples/sample_emails.csv`](../samples/sample_emails.cs
 - **Overlap:** "System Outage Affecting All Users" could fit both Customer Support and High Priority. Check which one wins, and sharpen the High Priority description if needed (for example: "If an email is urgent and also fits another category, choose High Priority").
 - **Fallback behavior:** it should catch unclear emails without grabbing clear ones. If it takes too many, tighten its description. If it takes too few, strengthen the "when in doubt" line.
 
+
+![Labels applied in Gmail](../images/inbox-manager-agent/gmail-labels-applied.png)
+*Test emails sorted into labels by the classifier.*
+
+![Executions list](../images/inbox-manager-agent/executions-list.png)
+*Successful workflow runs in n8n.*
 ---
 
 ## Still open
